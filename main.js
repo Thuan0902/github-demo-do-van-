@@ -265,15 +265,68 @@
 //     return cb(a, b);
 // }
 // console.log(caculate(1,2,sumCb));
-  
-var courser =[
-    'js',
-    'php',
-    'css'
-]
 
-var htmls = courser.map(function(courser){
-    return `<h2>${courser}</h2>`;
-});
+// var couser = [
+//     'js',
+//     'php',
+//     'ruby'
+// ];
 
-console.log(htmls);
+
+// Array.prototype.myMap = function(cb) {
+//     arrayLength = this.length;
+//     var output = [];
+//     for(var i=0;i<arrayLength;++i){
+//         var result = cb(this[i],i);
+//         output.push(result);
+//     }
+//     return output;
+// }
+// function meMap(couser,index){
+//     return `<h2>${couser }</h2>`;
+// }
+// // var htmls = couser.myMap(meMap);
+
+// // console.log(htmls.join(" "));
+
+// Array.prototype.forEach2 = function(callback){
+//     var arrayLength = this.length;
+//     var output = [];
+//     for(var i=0;i<arrayLength;i++){
+//         var result =  callback(this[i],i);
+//         output.push(result);
+//     }
+//     return output;
+// }
+
+// var htmlss= couser.forEach2(function(cousers,index){
+//     return `language ${index} ${cousers}`;
+// })
+
+// var htmls = couser.myMap(meMap);
+// console.log(htmls);
+// console.log(htmlss.join(''));
+
+const ages = [3, 10, 18, 20];
+Array.prototype.fill2 = function(callback){
+    var arrayLength = this.length;
+    var output = [];
+    for(var i =0 ;i<arrayLength;i++){
+        if(callback){ // rối chỗ chọn điều kiện 
+        var result = callback(this[i],i)
+        output.push(result);}
+    }
+    return output;
+    
+}
+
+function checkAge(age){
+    age > 18;
+    return `Age ${age}`;
+}
+
+var htmlsss = ages.fill2(checkAge);
+console.log(htmlsss.join('  '));
+
+
+
