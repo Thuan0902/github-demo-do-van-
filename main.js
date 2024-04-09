@@ -329,21 +329,101 @@
 // console.log(htmlsss.join('  '));
 
 
-Array.prototype.forEach2=function(callback){
-    for( index in this){
-        if(this.hasOwnProperty(index)){
-        callback(this[index], index,this);
-        }
-    }
-}
+// Array.prototype.forEach2=function(callback){
+//     for( index in this){
+//         if(this.hasOwnProperty(index)){
+//         callback(this[index], index,this);
+//         }
+//     }
+// }
+
+// var courses = [
+//     'js',
+//     'php',
+//     'ruby'
+// ]
+
+// courses.forEach2(function(course,index,array){
+    
+//     console.log(course,index,array);
+// }) ;
 
 var courses = [
-    'js',
-    'php',
-    'ruby'
-]
+    {
+        name: 'JS',
+        coin: '980',
+        isFinish: true,
+    },
+    {
+        name: 'PHP',
+        coin: '320',
+        isFinish: true,
+    },
+    {
+        name: 'RUBY',
+        coin: '1000',
+        isFinish: true,
+    },
 
-courses.forEach2(function(course,index,array){
+]
+// Array.prototype.filter2=function(callback){
+//     var output =[];
+//     for(var index in this){
+//         if(this.hasOwnProperty(index)){
+//             var result= callback(this[index],index,this)
+//             if(result){
+//                 output.push(this[index]);
+//             }
+//         }
+//     }
+//     return output;
+// }
+
+
+// var filterCorses = courses.filter2(function(courses,index,array){
     
-    console.log(course,index,array);
-}) ;
+//     return courses.coin > 500;
+// })
+
+// console.log(filterCorses)
+
+// Array.prototype.some2=function(callback){
+//     var output =false;
+//     for(var index in this){
+//         if(this.hasOwnProperty(index)){
+//             if(callback(this[index],index,this) == true){
+//             return true;
+//             break;}
+
+//         }
+//     }
+//     return output;
+// }
+
+
+// var myisFinish = courses.some2(function(course,index,array){
+//     console.log(index)
+//     return course.isFinish;
+// })
+// console.log(myisFinish);
+
+Array.prototype.every2 = function(callback){
+    var output = true;
+    for(var index in this){
+        if(this.hasOwnProperty(index)){
+            var result = callback(this[index],index,this)
+            if(result == false){
+                output=false;
+                break;
+            }
+        }
+    }
+    return output;
+}
+
+
+
+var myisEvery = courses.every2(function(course,index,array){
+    return course.coin > 500;
+})
+console.log( myisEvery);
