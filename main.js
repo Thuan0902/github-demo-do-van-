@@ -348,24 +348,24 @@
 //     console.log(course,index,array);
 // }) ;
 
-var courses = [
-    {
-        name: 'JS',
-        coin: '980',
-        isFinish: true,
-    },
-    {
-        name: 'PHP',
-        coin: '320',
-        isFinish: true,
-    },
-    {
-        name: 'RUBY',
-        coin: '1000',
-        isFinish: true,
-    },
+// var courses = [
+//     {
+//         name: 'JS',
+//         coin: '980',
+//         isFinish: true,
+//     },
+//     {
+//         name: 'PHP',
+//         coin: '320',
+//         isFinish: true,
+//     },
+//     {
+//         name: 'RUBY',
+//         coin: '1000',
+//         isFinish: true,
+//     },
 
-]
+// ]
 // Array.prototype.filter2=function(callback){
 //     var output =[];
 //     for(var index in this){
@@ -407,23 +407,55 @@ var courses = [
 // })
 // console.log(myisFinish);
 
-Array.prototype.every2 = function(callback){
-    var output = true;
-    for(var index in this){
-        if(this.hasOwnProperty(index)){
-            var result = callback(this[index],index,this)
-            if(result == false){
-                output=false;
-                break;
-            }
-        }
-    }
-    return output;
-}
+// Array.prototype.every2 = function(callback){
+//     var output = true;
+//     for(var index in this){
+//         if(this.hasOwnProperty(index)){
+//             var result = callback(this[index],index,this)
+//             if(result == false){
+//                 output=false;
+//                 break;
+//             }
+//         }
+//     }
+//     return output;
+// }
 
 
 
-var myisEvery = courses.every2(function(course,index,array){
-    return course.coin > 500;
-})
-console.log( myisEvery);
+// var myisEvery = courses.every2(function(course,index,array){
+//     return course.coin > 500;
+// })
+// console.log( myisEvery);
+
+
+//HTML DOM 
+
+//1. Element : ID , CLASS, TAG
+
+// var headingNode =  document.getElementById('heading');
+
+// console.log({
+//     element: headingNode
+// }); 
+
+// var textNode =  document.getElementsByClassName('text');
+
+// console.log(textNode); 
+
+// var tagNode =  document.getElementsByTagName('h1');
+
+// console.log(tagNode); 
+
+var headingNodes =  document.querySelector('.text')
+console.log(headingNodes)
+
+// css selector, HTML collection
+
+
+
+//2.
+//3.
+
+
+
