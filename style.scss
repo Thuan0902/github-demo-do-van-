@@ -1,0 +1,12 @@
+$red : hsl(0,100%,50%);
+$blue: (#122088);
+body{
+    background-color: white;
+}
+
+.text{
+    color: $red;
+    .thuan{
+        color: $blue;
+    }
+}
