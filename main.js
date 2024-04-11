@@ -485,12 +485,12 @@
 
 //innerHTML  outerHTML
 
-var boxElement =  document.querySelector('.box')
+// var boxElement =  document.querySelector('.box')
 
-boxElement.innerHTML = '<h1 class ="thuan">New Heading</h1>'
-boxElement.outerHTML = '<span>Thuan</span>'
+// boxElement.innerHTML = '<h1 class ="thuan">New Heading</h1>'
+// boxElement.outerHTML = '<span>Thuan</span>'
 
-console.log(boxElement)
+// console.log(boxElement)
 
 // function render(html){
 
@@ -519,6 +519,7 @@ console.log(boxElement)
 
 // }
 
-// console.log(courses[1])
+// console.log(render(courses))
+
 
 

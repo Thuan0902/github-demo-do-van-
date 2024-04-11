@@ -1,5 +1,9 @@
 $red : hsl(0,100%,50%);
 $blue: (#122088);
+@mixin fontTetx{
+    font-family: cursive;
+    font-size: 20px;
+}
 body{
     background-color: white;
 }
@@ -13,4 +17,8 @@ body{
 
 .solo{
     color: yellow;
+}
+
+body{
+    margin: 0, auto;
 }
