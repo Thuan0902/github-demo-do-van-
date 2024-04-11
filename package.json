@@ -2,7 +2,7 @@
   "name": "f8",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \\\"Erron: no test specified\\ \" && exit 1"
   },

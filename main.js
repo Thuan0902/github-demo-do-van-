@@ -447,15 +447,78 @@
 
 // console.log(tagNode); 
 
-var headingNodes =  document.querySelector('.text')
-console.log(headingNodes)
+// var headingNodes =  document.querySelector('.text')
+// console.log(headingNodes)
 
 // css selector, HTML collection
 
 
+// var heading =document.getElementById('heading');
+// var heading =document.querySelector('h1');
 
-//2.
-//3.
+// heading.title='heading';
+// heading.title = 'sola'
+// console.log(heading.getAttribute('class', 'heading-text'))
 
+// console.log(heading)
+
+
+
+// var link = document.querySelector('a')
+
+// link.setAttribute('data','link')
+
+
+// console.log(link)
+
+
+//innerText, textContent;
+
+// var heading = document.querySelector('.heading');
+
+// //geter
+// console.log(heading.textContent) ;
+// console.log(heading.innerText) ;
+// //seter
+// heading.innerText="new heading"
+
+
+//innerHTML  outerHTML
+
+var boxElement =  document.querySelector('.box')
+
+boxElement.innerHTML = '<h1 class ="thuan">New Heading</h1>'
+boxElement.outerHTML = '<span>Thuan</span>'
+
+console.log(boxElement)
+
+// function render(html){
+
+// html =document.querySelector('ul')
+
+// html.innerHTML='<li>Khóa học HTML</li><li>Khóa học JS</li><li>Khóa học PHP</li>'
+ 
+//     return html
+// }
+
+// console.log(render())
+
+// var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java']
+
+// // function render(courses) {
+    
+// // }
+
+// function render(courses){
+//     var html = courses.map(function(cb){
+//         return `<li>${cb}</li>`
+//     }).join('')
+
+//     var ul= document.querySelector('ul')
+//     ul.innerHTML = html
+
+// }
+
+// console.log(courses[1])
 
 
