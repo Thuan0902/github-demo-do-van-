@@ -521,5 +521,49 @@
 
 // console.log(render(courses))
 
+// var box =document.querySelector('.box')
+
+// box.innerHTML='<h1 title="Heading">heading</h1>'
+
+// console.log(document.querySelector('h1').innerText = 'aloo')
 
 
+var box =document.querySelector('.box')
+// box.innerHTML='<h1 class="headingNode">Heading</h1>'
+// box.setAttribute('id','thuan')
+// box.removeAttribute('id','thuan')
+// console.log(heading.textContent)
+
+// box.style.width = "100px"
+// box.style.height = "100px"
+
+// box.style.backgroundColor="red";
+
+// Object.assign(box.style,{
+//     width: '200px',
+//     height: '100px',
+//     backgroundColor: 'green'
+
+
+// })
+// console.log(box.style)
+
+
+// var red = document.querySelector('.red')
+// red.style.backgroundColor = '#f00';
+// document.querySelector('p').style.color = "#ff0000";
+
+
+// box.classList.add('thuan')
+// box.classList.remove('thuan')
+
+
+// box.classList.toggle('thuan')
+// console.log(box.classList.contains('thuan'))
+
+
+var elementBox = document.querySelector('div');
+// elementBox.foreach((div)=> console.log(elementBox))
+
+// for(var index =0;index<elementBox.length)
+console.log(elementBox)
