@@ -528,7 +528,7 @@
 // console.log(document.querySelector('h1').innerText = 'aloo')
 
 
-var box =document.querySelector('.box')
+// var box =document.querySelector('.box')
 // box.innerHTML='<h1 class="headingNode">Heading</h1>'
 // box.setAttribute('id','thuan')
 // box.removeAttribute('id','thuan')
@@ -562,8 +562,39 @@ var box =document.querySelector('.box')
 // console.log(box.classList.contains('thuan'))
 
 
-var elementBox = document.querySelector('div');
+var elementBox = document.querySelector('h2');
+var elementBox3 = document.querySelector('h3');
 // elementBox.foreach((div)=> console.log(elementBox))
 
 // for(var index =0;index<elementBox.length)
-console.log(elementBox)
+// console.log(elementBox)
+
+// elementBox.forEach(function(div){
+//     div.classList.add('box')
+    
+// })
+
+
+// DOM events
+// 1. Attribute events
+// 2. Assign event using the element node
+// elementBox.onclick = function(e){
+//     return elementBox.innerHTML = 'aloo'
+// }
+
+// function chay(){
+//     return elementBox3.innerHTML = "chay ngay di"
+// }
+
+
+// 3 .Input / select
+// 4. Key up/ down
+
+var inputElement = document.querySelector('input[type ="text"]')
+var text = document.querySelector('.text')
+inputElement.oninput = function(e){
+    console.log(e.target.value);
+}
+
+
+
