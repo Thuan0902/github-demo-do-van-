@@ -590,11 +590,46 @@ var elementBox3 = document.querySelector('h3');
 // 3 .Input / select
 // 4. Key up/ down
 
-var inputElement = document.querySelector('input[type ="text"]')
-var text = document.querySelector('.text')
-inputElement.oninput = function(e){
-    console.log(e.target.value);
+// var inputElement = document.querySelector('input[type ="checkbox"]')
+// var text = document.querySelector('.text')
+// inputElement.onchange = function(e){
+//     console.log(e.target.checked)
+// }
+
+
+// var inputElement = document.querySelector('select')
+// var text = document.querySelector('.text')
+// inputElement.onchange = function(e){
+//     console.log(e.target.value)
+// }
+
+// var inputElement = document.querySelector('input[type ="text"]')
+// var text = document.querySelector('.text')
+// inputElement.onkeydown = function(e){
+//     console.log(e.target.value)
+// }
+
+
+
+
+
+// var inputElement = document.querySelector('input[type ="text"]')
+// var text = document.querySelector('.text')
+// inputElement.onkeyup = function(e){
+//     console.log(e.which)
+
+//     switch(e.which){
+//         case 65:
+//             console.log('exit');
+//             break;
+//     }
+// }
+
+
+document.onkeydown = function(e){
+    switch(e.which){
+        case 65:
+            console.log('exit');
+            break;
+    }
 }
-
-
-
