@@ -626,10 +626,27 @@ var elementBox3 = document.querySelector('h3');
 // }
 
 
-document.onkeydown = function(e){
-    switch(e.which){
-        case 65:
-            console.log('exit');
-            break;
+// document.onkeydown = function(e){
+//     switch(e.which){
+//         case 65:
+//             console.log('exit');
+//             break;
+//     }
+// }
+
+
+// 5. PreventDefault
+// 6. stopPropagation
+var aElement =document.links;
+
+for(var i =o;i< aElement.length;++i){
+    aElement[i].onclick = function(e){
+        
+        if(!e.target.href.startsWith('https://f8.edu.vn')){
+            e.preventDefault();
+        }
+
     }
 }
+
+// console.log(aElement)
