@@ -33,13 +33,29 @@
 
     <!-- // 5. PreventDefault
     // 6. stopPropagation -->
-        <a href="https://f8.edu.vn">
+        <!-- <a href="https://f8.edu.vn">
             Học lập trình 
         </a><br>
         <a href="https://google.com.vn">
             Tìm Kiếm
-        </a>
+        </a> -->
 
+        <style>
+            ul{
+                display: none;
+            }
+            input:focus ~ ul{
+                display: block;
+            }
+        </style>
+
+        <!-- <input type="text" placeholder="tim kiem">
+        <ul>
+            <li>js</li>
+            <li>ruby</li>
+            <li>php</li>
+        </ul> -->
+        <button onclick="prompt()">click me</button>
     <script src="./main.js"></script>
 </body>
 </html>

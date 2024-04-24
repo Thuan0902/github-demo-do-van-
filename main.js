@@ -637,16 +637,115 @@ var elementBox3 = document.querySelector('h3');
 
 // 5. PreventDefault
 // 6. stopPropagation
-var aElement =document.links;
+// var aElement =document.links;
 
-for(var i =o;i< aElement.length;++i){
-    aElement[i].onclick = function(e){
+// for(var i =o;i< aElement.length;++i){
+//     aElement[i].onclick = function(e){
         
-        if(!e.target.href.startsWith('https://f8.edu.vn')){
-            e.preventDefault();
-        }
+//         if(!e.target.href.startsWith('https://f8.edu.vn')){
+//             e.preventDefault();
+//         }
 
-    }
-}
+//     }
+// }
 
 // console.log(aElement)
+
+// cũng có thể sử dụng link hoặc anchors (nhưng anchors sẽ chỉ tìm kiếm những thẻ a có element 'name')
+// var aElement = document.querySelectorAll('a');
+
+// for(var i=0;i<aElement.length;i++){
+//     aElement[i].onclick =function(e){
+//         if(!e.target.href.startWith("https://f8.edu.vn")){
+//             e.preventDefault();
+//         }
+//     }
+// }
+
+
+// var ulElement =document.querySelector('ul');
+
+// ulElement.onmousedown = function(e){
+//     e.preventDefault();
+// }
+
+// ulElement.onclick = function(e){
+//     console.log(e.target)
+// }
+
+
+// EVENT LISTENER 
+
+// var btnElement = document.querySelector('button')
+
+// btnElement.onclick = function(){
+//     console.log('viec 1')
+// }
+
+
+//JSON
+// 1. Là một định dạng dữ liệu (chuỗi)
+// 2. JavaScript Object Notation
+// 3. JSON: Number,String, Boolean, Null, Array,
+// Object
+// Mã hóa / Giải mã
+// Encode / decode 
+// Stringify / Parse
+
+// // var json = '["js","php"]';
+// var json = '{"name":"thuan","age": 18}';
+
+// var a ='1';
+
+// console.log(JSON.parse(a));
+
+// 1. Event listener --> OK
+// 2. JSON --> OK
+// 3. Promise (Khó)
+//      - Sync
+//      - Async
+//      - Pain
+//      - Lý thuyết
+//      - thực hành
+
+// setTimeout, setInterval, fetch,
+// XMLHttpRequest, file reading,
+// request animation frame
+// => là những thao tác bất đồng bộ (Async)
+
+// Callback hell
+// setTimeout(function() {
+//     console.log(1); // viec 1
+//     setTimeout(function() {
+//         console.log(2); // viec 2
+//         setTimeout(function() {
+//             console.log(3); // viec 3
+//             setTimeout(function() {
+//                 console.log(4); // viec 4
+//             }, 1000);
+//         }, 1000);
+//     }, 1000);
+// }, 1000);
+
+var promise = new Promise
+
+// 4. Fetch
+// 5. DOM location
+// 6. Local storage
+// 7. Session storage
+// 8. Coding convention
+// 9. Best Practices
+// 10. Mistakes
+// 11. Performance
+
+
+
+
+
+
+
+
+
+
+
+
