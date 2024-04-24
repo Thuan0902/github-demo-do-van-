@@ -727,7 +727,162 @@ var elementBox3 = document.querySelector('h3');
 //     }, 1000);
 // }, 1000);
 
-var promise = new Promise
+
+// b1 : khỏi tạo Promise
+// b2 : Executor
+
+// promise có 3 trạng thái 
+// 1. pendding : không trả kết quả , tràn bộ nhớ
+// 2. fulfilled : thành công
+// 3. reiected : đã thất bại
+// var promise = new Promise(
+//     // Executor
+//     function(resolve, reject){
+        // Logic
+        // thành công : resolve()
+        // thất bại : reject()
+
+        // Fake call API
+        // resolve([
+        //     {
+        //         id: 1,
+        //         name: 'js'
+        //     }
+        // ]);
+
+//         reject('co loi')
+//     }
+// )
+// promise
+//     .then(function(courses){
+//         console.log(courses)
+//     })
+//     .catch(function(error){
+//         console.log(error)
+//     })
+//     .finally(function(){
+//         console.log('Done')
+//     })
+// trả lời khi phỏng vấn : em có nắm về khái niện Promise
+// 1. Promise là một khái niệm sinh ra để xử lý những thao tác bất đồng bộ 
+//  trước khi có Promise thì chúng ta hay phải sử dụng Callback và 
+//  Callback sẽ xuất hiện hiện tượng Callback Hell(callback trong callback)
+//  làm cho code dễ hiểu hơn
+
+// 1. Promise.resolve
+// 2. Promise.reject
+
+// //  Thư viện; output luôn luôn là một PROMISE 
+// var promise = Promise. reject('Error!');
+// promise
+// then(function (result) {
+// 23333 .catch(function(err) {
+// console.log('result: ', result);
+// })
+// console.log('err: ', err);
+// });
+
+// 3. Promise.all dùng để chạy ss cho 2 bất đồng bộ ko phụ thuộc và nhau
+
+var promise1 = new Promise(
+    function(resolve){
+        setTimeout(function(){
+            resolve([1])
+        },2000)
+    }
+)
+var promise2 = new Promise(
+    function(resolve){
+        setTimeout(function(){
+            resolve([2,3])
+        },5000)
+    }
+);
+
+Promise.all([promise1,promise2]).then(function(result){
+    var result1 = result[0];
+    var result2 = result[1];
+
+    console.log(result1.concat(result2))
+})
+
+var user =[
+    {
+        id: 1,
+        name: "Van Thuan" ,
+    },
+    {
+        id: 2,
+        name: "son dang"
+    },
+    {
+        id: 3,
+        name: "Tra..."
+    },
+    // ...
+]
+
+var comment =[
+    {
+        id: 1,
+        content: "alooo",
+        userId: 1
+    },
+    {
+        id: 2,
+        content: 'hiiii',
+        userId: 2,
+    }
+    // ...
+]
+// 1. Lấy comments
+// 2. Từ comments lấy ra user_id
+// từ user_id lấy ra user tương ứng
+
+// fake API
+
+function getComments(){
+    return new Promise(function(resolve){
+        setTimeout(function(){
+            return resolve(comment);
+        },1000)
+    })
+}
+getComments()
+    .then(function(contents){
+        var userIds = comment.map(function(content){
+            return content.userId;
+        })
+        return getUserByIds(userIds)
+            .then(function(usersr){
+                return {
+                    user: usersr,
+                    comment: comment,
+                }
+            });
+}).then(function(data){
+    var commentBock = document.getElementById('comment')
+    var html = '';
+    data.comment.forEach(function(comment){
+        var user = data.user.filter(function(user){
+            return user.id === comment.id
+        })
+        html += `${user.name}:${comment.content}`
+    })
+    commentBock.innerHTML= html
+})
+function getUserByIds(userIds){
+    return new Promise(function(resolve){
+            result = user.filter(function(users){
+                    return userIds.includes(users.id);
+            })
+            setTimeout(function(){
+            resolve(result)
+        },1000)
+    })
+}
+
+
 
 // 4. Fetch
 // 5. DOM location
